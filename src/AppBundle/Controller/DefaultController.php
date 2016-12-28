@@ -2,7 +2,6 @@
 
 namespace AppBundle\Controller;
 
-
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -28,15 +27,21 @@ class DefaultController extends Controller {
             $user = $this->getDoctrine()
                     ->getRepository('AppBundle:User')
                     ->findOneBy(array('name' => $name));
-         
-            if(!$user) {
-                
+
+            if (!$user) {
+
                 throw $this->createNotFoundException(
                         'No user named ' . $name . ' found!'
                 );
             }
+        } else {
+
+
+            $user = NULL;
         }
         return $this->render('about/index.html.twig', array('user' => $user));
     }
+    
+    
 
 }

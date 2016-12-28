@@ -1,0 +1,13 @@
+# /var/www/mava/behat.yml
+default:
+  extensions:
+    Behat\Symfony2Extension: ~
+    Behat\MinkExtension:
+      goutte: ~
+      selenium2: 
+        capabilities:
+              version: ''
+      base_url: http://localhost/mava/web/app_dev.php
+      
+      
+  
