@@ -40,7 +40,8 @@
         "behat/mink-selenium2-driver": "dev-master",
         "behat/symfony2-extension": "dev-master",
         "behat/mink-browserkit-driver": "dev-master",
-        "behat/mink-goutte-driver": "dev-master"
+        "behat/mink-goutte-driver": "dev-master",
+        "phpunit/phpunit": "5.7.5"
     },
     "scripts": {
         "symfony-scripts": [
